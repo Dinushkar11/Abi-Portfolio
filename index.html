@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abiramy Logachandren | Program Specialist</title>
+<meta name="description" content="Program Specialist at USBus Mobile American Space. Peacebuilding, human rights and youth engagement in Sri Lanka.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ COLOURS: change the blues here and the whole site updates ============ */
+:root{
+  --navy:#0b2447;      /* hero, footer, headings */
+  --blue:#1d4ed8;      /* buttons, links, accents */
+  --sky:#60a5fa;       /* highlights on dark backgrounds */
+  --mist:#eef4ff;      /* light section background */
+  --line:#d6e2f7;      /* borders */
+  --text:#1e293b;
+  --muted:#52627a;
+  --white:#fff;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--text);line-height:1.65;background:var(--white);-webkit-text-size-adjust:100%}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;color:var(--navy);line-height:1.2}
+a{color:var(--blue)}
+:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+section.alt{background:var(--mist)}
+h2{font-size:clamp(1.6rem,4vw,2.2rem);margin-bottom:28px}
+
+/* nav */
+header{position:sticky;top:0;z-index:20;background:rgba(11,36,71,.96);backdrop-filter:blur(8px)}
+nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{color:var(--white);font-family:"Source Serif 4",Georgia,serif;font-weight:600;text-decoration:none;font-size:1.1rem}
+.links{display:flex;gap:22px;list-style:none}
+.links a{color:#cfe0ff;text-decoration:none;font-size:.92rem}
+.links a:hover{color:var(--white)}
+.menu{display:none;background:none;border:1px solid #3b5a8f;color:var(--white);border-radius:8px;padding:6px 12px;font-size:.95rem;cursor:pointer}
+@media(max-width:820px){
+  .menu{display:block}
+  .links{display:none;position:absolute;top:60px;left:0;right:0;background:var(--navy);flex-direction:column;gap:0;padding:8px 20px 16px;border-top:1px solid #1d3a6b}
+  .links.open{display:flex}
+  .links a{display:block;padding:12px 0}
+}
+
+/* hero */
+.hero{background:var(--navy);color:var(--white);padding:84px 0 76px}
+.hero .wrap{display:grid;grid-template-columns:1fr 260px;gap:48px;align-items:center}
+.hero h1{color:var(--white);font-size:clamp(2.2rem,6vw,3.6rem);margin-bottom:10px}
+.role{font-size:1.15rem;color:var(--sky);font-weight:500;margin-bottom:18px}
+.hero p.lead{color:#d3e1fa;max-width:56ch;margin-bottom:28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;text-decoration:none;font-size:.95rem;border:2px solid var(--sky)}
+.btn.fill{background:var(--sky);color:var(--navy)}
+.btn.line{color:var(--white)}
+.btn:hover{opacity:.88}
+.photo{width:260px;height:260px;border-radius:50%;border:4px solid var(--sky);background:#143466;display:flex;align-items:center;justify-content:center;overflow:hidden;font-family:"Source Serif 4",Georgia,serif;font-size:4.5rem;color:var(--sky)}
+.photo img{width:100%;height:100%;object-fit:cover}
+@media(max-width:760px){
+  .hero{padding:48px 0}
+  .hero .wrap{grid-template-columns:1fr;text-align:center;gap:28px}
+  .photo{order:-1;margin:0 auto;width:170px;height:170px;font-size:3rem}
+  .hero p.lead{margin-left:auto;margin-right:auto}
+  .btns{justify-content:center}
+}
+
+/* about */
+.about{display:grid;grid-template-columns:1.5fr 1fr;gap:40px}
+.about p+p{margin-top:14px}
+.facts{display:grid;gap:14px;align-content:start}
+.fact{background:var(--mist);border-left:4px solid var(--blue);padding:14px 18px;border-radius:0 10px 10px 0}
+.fact b{display:block;color:var(--navy);font-size:1.05rem}
+.fact span{color:var(--muted);font-size:.9rem}
+@media(max-width:760px){.about{grid-template-columns:1fr}}
+
+/* timeline */
+.timeline{border-left:3px solid var(--line);margin-left:6px}
+.item{position:relative;padding:0 0 34px 28px}
+.item:last-child{padding-bottom:0}
+.item::before{content:"";position:absolute;left:-14px;top:6px;width:17px;height:17px;border-radius:50%;background:var(--white);border:4px solid var(--blue)}
+.item h3{font-size:1.2rem}
+.org{color:var(--blue);font-weight:600;font-size:.95rem}
+.date{color:var(--muted);font-size:.88rem;margin:2px 0 8px}
+.item ul{padding-left:18px}
+.item li{margin-bottom:5px}
+
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:22px}
+.card h3{font-size:1.1rem;margin-bottom:4px}
+.card .date{margin-bottom:10px}
+.card p,.card li{font-size:.95rem}
+.card ul{padding-left:18px}
+.tag{display:inline-block;background:var(--mist);color:var(--navy);border:1px solid var(--line);padding:6px 14px;border-radius:999px;font-size:.9rem;margin:0 8px 10px 0}
+.sub{font-size:1.1rem;margin:30px 0 14px}
+.sub:first-of-type{margin-top:0}
+.ach{list-style:none}
+.ach li{padding:14px 0;border-bottom:1px solid var(--line)}
+.ach li:last-child{border:0}
+.ach b{color:var(--navy)}
+.ach span{display:block;color:var(--muted);font-size:.9rem}
+
+/* contact + footer */
+.contact{text-align:center}
+.contact p{max-width:52ch;margin:0 auto 24px;color:var(--muted)}
+footer{background:var(--navy);color:#9db6de;text-align:center;padding:26px 20px;font-size:.88rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap"><nav>
+  <a class="brand" href="#top" id="brand"></a>
+  <button class="menu" id="menu" aria-expanded="false" aria-controls="links">Menu</button>
+  <ul class="links" id="links"></ul>
+</nav></div></header>
+
+<main id="top">
+  <section class="hero"><div class="wrap">
+    <div>
+      <h1 id="name"></h1>
+      <p class="role" id="role"></p>
+      <p class="lead" id="tagline"></p>
+      <div class="btns" id="heroBtns"></div>
+    </div>
+    <div class="photo" id="photo"></div>
+  </div></section>
+
+  <section id="about"><div class="wrap">
+    <h2>About me</h2>
+    <div class="about"><div id="aboutText"></div><div class="facts" id="facts"></div></div>
+  </div></section>
+
+  <section id="experience" class="alt"><div class="wrap">
+    <h2>Work experience</h2><div class="timeline" id="work"></div>
+  </div></section>
+
+  <section id="education"><div class="wrap">
+    <h2>Education</h2><div class="timeline" id="education-list"></div>
+  </div></section>
+
+  <section id="volunteering" class="alt"><div class="wrap">
+    <h2>Volunteer experience</h2><div class="timeline" id="volunteer"></div>
+  </div></section>
+
+  <section id="achievements"><div class="wrap">
+    <h2>Training and achievements</h2><ul class="ach" id="achievements-list"></ul>
+  </div></section>
+
+  <section id="skills" class="alt"><div class="wrap">
+    <h2>Skills and languages</h2>
+    <h3 class="sub">Skills</h3><div id="skillTags"></div>
+    <h3 class="sub">Languages</h3><div id="langTags"></div>
+  </div></section>
+
+  <section id="contact"><div class="wrap contact">
+    <h2>Get in touch</h2><p id="contactText"></p>
+    <div class="btns" id="contactBtns" style="justify-content:center"></div>
+  </div></section>
+</main>
+<footer id="footer"></footer>
+
+<script>
+/* =====================================================================
+   EDIT YOUR CONTENT HERE. This is the only part you need to change.
+   - Keep the quote marks "like this" and the commas at the end of lines.
+   - To add a job, copy one { ... }, block and paste it below the last one.
+   - To remove something, delete its whole { ... }, block.
+   - Put your photo file (e.g. photo.jpg) in the same folder as this file,
+     then set photo: "photo.jpg"
+   ===================================================================== */
+const SITE = {
+  name: "Abiramy Logachandren",
+  shortName: "Abiramy Logachandren",
+  role: "Program Specialist, USBus Mobile American Space",
+  tagline: "Peacebuilding and human rights graduate coordinating nationwide youth, educational and community programs with the U.S. Embassy Sri Lanka and American Spaces.",
+  photo: "Profile.jpeg", 
+  initials: "AL",
+  email: "abichandren1510@gmail.com",
+  phone: "+94 77 287 9924",  
+  linkedin: "https://www.linkedin.com/in/abiramy-logachandren-41387b215/", 
+  location: "Jaffna, Sri Lanka",
+
+  about: [
+    "I am a detail-oriented and organised programme professional with strong communication, coordination and administrative skills. I enjoy supporting people and building efficient teams, and I am committed to accuracy, professionalism and high-quality support.",
+    "My work spans nationwide USBus programmes with the U.S. Embassy Sri Lanka, gender equality and human rights projects, and youth-led peacebuilding. I am completing a Master of Human Rights in Human Development and Gender Justice and a Postgraduate Diploma in International Relations."
+  ],
+  facts: [
+    { title: "2 years+", text: "Working with American Spaces Sri Lanka" },
+    { title: "Master of Human Rights", text: "University of Colombo, Merit Pass" },
+    { title: "Trilingual", text: "Tamil, English and Sinhala" }
+  ],
+
+  work: [
+    { title: "Program Specialist", org: "USBus Mobile American Space (American Spaces Sri Lanka)", date: "August 2025 - Present", points: [
+      "Lead planning, coordination and delivery of nationwide USBus educational, youth and community programs with U.S. Embassy Sri Lanka.",
+      "Work with universities, government and private institutions, facilitators, volunteers and partners.",
+      "Manage event logistics: scheduling, venues, travel, procurement and on-site operations.",
+      "Maintain participant databases, reports and official records; support budgeting, reimbursements and vendors.",
+      "Monitor participation and feedback; contribute to reporting, success stories and stakeholder communications."
+    ]},
+    { title: "Program Coordinator", org: "USBus Mobile American Space (American Spaces Sri Lanka)", date: "May 2025 - February 2026", points: [
+      "Supported nationwide educational, youth and community programs under the USBus initiative.",
+      "Managed registration, attendance tracking, scheduling, venues and on-site coordination.",
+      "Coordinated volunteers and stakeholders, and followed up after each programme for reporting."
+    ]},
+    { title: "Deputy Coordinator", org: "American Corner Jaffna (American Spaces Sri Lanka)", date: "October 2024 - May 2025", points: [
+      "Supported administration and delivery of educational, cultural, leadership and community programs.",
+      "Helped plan workshops, youth programs, outreach activities and special events.",
+      "Kept participant records, schedules, reports and correspondence; supported youth engagement and volunteers."
+    ]},
+    { title: "Junior Project Officer", org: "Centre for Equality and Justice (CEJ)", date: "May 2024 - October 2024", points: [
+      "Supported projects on gender equality, human rights and prevention of sexual and gender-based violence.",
+      "Prepared narrative and statistical reports for monitoring and donor reporting.",
+      "Developed and translated bilingual Tamil-English resources to improve access to information and public services.",
+      "Helped run training sessions and awareness activities; documented case studies and success stories."
+    ]},
+    { title: "Intern", org: "World Vision Lanka, Jaffna Cluster", date: "August 2022 - December 2022", points: [
+      "Supported programme implementation through translation, data entry, documentation and administration.",
+      "Assisted with field visits, workshops and community activities."
+    ]}
+  ],
+
+  volunteer: [
+    { title: "Volunteer Specialist, Governance and Social Cohesion", org: "International Youth Alliance for Peace (IYAP)", date: "March 2026 - Present", points: [
+      "Advise on youth programs focused on governance, peacebuilding and social cohesion.",
+      "Support youth-led initiatives that promote inclusivity and conflict transformation."
+    ]},
+    { title: "Communication Lead", org: "Digizen", date: "2025 - Present", points: [
+      "Coordinate program activities and support project implementation.",
+      "Manage stakeholder communication and grow networks for outreach and visibility."
+    ]},
+    { title: "Core Club Leader and Volunteer", org: "Sri Lanka Unites", date: "2020 - 2025", points: [
+      "Led youth initiatives promoting peacebuilding, reconciliation and social cohesion.",
+      "Organised community discussions and awareness programs; mentored youth members."
+    ]},
+    { title: "Youth Forum Member", org: "American Spaces Sri Lanka", date: "July 2021 - April 2024", points: [
+      "Supported youth-led educational, cultural and leadership programs with U.S. Embassy supported initiatives.",
+      "Assisted with event coordination, outreach and volunteer activities."
+    ]},
+    { title: "UN Volunteer", org: "Youth Community Leadership Initiative (YCLI)", date: "2022 - 2023", points: [
+      "Took part in a UN-funded youth leadership program on community development and civic engagement.",
+      "Contributed to community initiatives for youth empowerment."
+    ]}
+  ],
+
+  education: [
+    { title: "Postgraduate Diploma in International Relations", org: "Bandaranaike Centre for International Studies (BCIS)", date: "2026 - Present", points: ["International relations, diplomacy, foreign policy and contemporary global issues."] },
+    { title: "Master of Human Rights in Human Development and Gender Justice (Merit Pass)", org: "University of Colombo", date: "2026", points: ["Human rights, gender equality, development studies, social justice and research on contemporary human rights challenges."] },
+    { title: "B.A. Hons in Peace and Conflict Resolution (Second Class Upper Division)", org: "University of Kelaniya", date: "2024", points: ["Peacebuilding, conflict analysis, reconciliation, governance, community engagement, leadership and principles of management."] },
+    { title: "G.C.E. Advanced Level Examination (Arts Stream)", org: "", date: "2018", points: ["3 A passes in Political Science, Sri Lankan and European History, and Tamil."] }
+  ],
+
+  achievements: [
+    { title: "Youth Champion, Youth Beyond Borders Regional Exchange Programme", text: "Bangkok, Thailand (2023 and 2024). Organised by Kenan Foundation Asia with Sri Lanka Unites, USAID, Center for Social Integrity and FHI360." },
+    { title: "American Spaces Youth Leadership Summit", text: "U.S. Embassy Sri Lanka, February 2023." },
+    { title: "Delegate, Everest International Model United Nations Conference", text: "Kathmandu, Nepal, 17-21 April 2022. Organised by YTS Nepal with the U.S. Embassy, Sri Lanka." },
+    { title: "Central and South Asia American Spaces Online Training Program (VT100)", text: "Completed 2025. Bureau of Educational and Cultural Affairs, Office of American Spaces." },
+    { title: "American Spaces South Asia Youth Network Development Training Program", text: "Colombo, December 2024. U.S. Department of State, Bureau of Educational and Cultural Affairs." },
+    
+    
+  ],
+
+  skills: ["Project coordination", "Communication and stakeholder engagement", "Report writing", "Event planning and management", "Graphic design with Canva", "Photography", "Translation (Tamil-English)", "Documentation and data management"],
+  languages: ["Tamil: Native", "English: Fluent", "Sinhala: Moderate"],
+
+  contactText: "I am open to conversations about programme coordination, peacebuilding, human rights and youth engagement work. The best way to reach me is by email."
+};
+
+/* ===================== Below this line: no need to edit ===================== */
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const S = SITE;
+
+document.title = S.name + " | " + S.role.split(",")[0];
+$("brand").textContent = S.shortName;
+$("name").textContent = S.name;
+$("role").textContent = S.role;
+$("tagline").textContent = S.tagline;
+$("photo").innerHTML = S.photo ? `<img src="${esc(S.photo)}" alt="Portrait of ${esc(S.name)}">` : esc(S.initials);
+
+const nav = [["about","About"],["experience","Experience"],["education","Education"],["volunteering","Volunteering"],["achievements","Achievements"],["skills","Skills"],["contact","Contact"]];
+$("links").innerHTML = nav.map(n => `<li><a href="#${n[0]}">${n[1]}</a></li>`).join("");
+$("menu").onclick = () => { const o = $("links").classList.toggle("open"); $("menu").setAttribute("aria-expanded", o); };
+$("links").onclick = e => { if (e.target.tagName === "A") { $("links").classList.remove("open"); $("menu").setAttribute("aria-expanded", false); } };
+
+const btn = (href, label, cls) => `<a class="btn ${cls}" href="${esc(href)}"${href.startsWith("http") ? ' target="_blank" rel="noopener"' : ""}>${esc(label)}</a>`;
+$("heroBtns").innerHTML = btn("#experience", "View my experience", "fill") + btn("#contact", "Contact me", "line");
+
+$("aboutText").innerHTML = S.about.map(p => `<p>${esc(p)}</p>`).join("");
+$("facts").innerHTML = S.facts.map(f => `<div class="fact"><b>${esc(f.title)}</b><span>${esc(f.text)}</span></div>`).join("");
+
+const entry = (e, tag) => {
+  const list = e.points.length > 1 ? `<ul>${e.points.map(p => `<li>${esc(p)}</li>`).join("")}</ul>` : `<p>${esc(e.points[0] || "")}</p>`;
+  return `<${tag} class="${tag === "div" ? "item" : "card"}"><h3>${esc(e.title)}</h3>${e.org ? `<div class="org">${esc(e.org)}</div>` : ""}<div class="date">${esc(e.date)}</div>${list}</${tag}>`;
+};
+$("work").innerHTML = S.work.map(e => entry(e, "div")).join("");
+$("education-list").innerHTML = S.education.map(e => entry(e, "div")).join("");
+$("volunteer").innerHTML = S.volunteer.map(e => entry(e, "div")).join("");
+$("achievements-list").innerHTML = S.achievements.map(a => `<li><b>${esc(a.title)}</b><span>${esc(a.text)}</span></li>`).join("");
+$("skillTags").innerHTML = S.skills.map(s => `<span class="tag">${esc(s)}</span>`).join("");
+$("langTags").innerHTML = S.languages.map(s => `<span class="tag">${esc(s)}</span>`).join("");
+
+$("contactText").textContent = S.contactText;
+
+const contactBtn = (href, label) => btn(href, label, "fill").replace('class="btn fill"', 'class="btn fill" style="background:var(--blue);border-color:var(--blue);color:#fff"');
+let cb = contactBtn("mailto:" + S.email, "Email " + S.email);
+if (S.phone) cb += contactBtn("tel:" + S.phone.replace(/\s/g, ""), "Call " + S.phone);
+if (S.linkedin) cb += contactBtn(S.linkedin, "LinkedIn");
+$("contactBtns").innerHTML = cb;
+
+
+</script>
+</body>
+</html>
